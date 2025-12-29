@@ -10,9 +10,21 @@ services:
       - key: N8N_BASIC_AUTH_USER
         value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: CAMBIA_ESTA_PASSWORD
+        value: Peru2025@..
+      - key: N8N_HOST
+        value: automatizacion-.onrender.com
+      - key: N8N_PROTOCOL
+        value: https
       - key: N8N_PORT
         value: "5678"
+
+      - key: WEBHOOK_URL
+        value: https://automatizacion-.onrender.com
+      - key: N8N_EDITOR_BASE_URL
+        value: https://automatizacion-.onrender.com/
+      - key: VUE_APP_URL_BASE_API
+        value: https://automatizacion-.onrender.com/
+
       - key: NODE_ENV
         value: production
 
