@@ -28,5 +28,8 @@ services:
 
       - key: NODE_ENV
         value: production
+      - key: N8N_COMMUNITY_PACKAGES_ENABLED
+        value: "true"
+
 
 
