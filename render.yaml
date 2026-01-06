@@ -30,6 +30,8 @@ services:
         value: production
       - key: N8N_COMMUNITY_PACKAGES_ENABLED
         value: "true"
+      - key: N8N_CUSTOM_EXTENSIONS
+        value: /home/node/.n8n/custom
 
 
 
