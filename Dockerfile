@@ -1,18 +1,13 @@
 FROM n8nio/n8n:1.117.2
 
-USER root
-
-# Crear carpeta correcta para community nodes
-RUN mkdir -p /home/node/.n8n/custom && \
-    cd /home/node/.n8n/custom && \
-    npm init -y && \
-    npm install \
-      n8n-nodes-serpapi \
-      n8n-nodes-upload-post
-
-# Permisos
-RUN chown -R node:node /home/node/.n8n
-
 USER node
 
+# Habilitar community packages
+ENV N8N_COMMUNITY_PACKAGES_ENABLED=true
+
+# Instalar community nodes correctamente (registra installedPackages.json)
+RUN n8n community-packages install n8n-nodes-serpapi && \
+    n8n community-packages install n8n-nodes-upload-post
+
 EXPOSE 5678
+
